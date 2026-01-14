@@ -253,18 +253,6 @@ npm run dev
 
 ## 🎯 Technical Highlights
 
-### 🧠 **Vector Similarity Search**
-```python
-# FAISS indexing for fast retrieval
-index = faiss.IndexFlatL2(512)
-index.add(embeddings)  # Add all known faces
-D, I = index.search(query_embedding, k=1)  # Find nearest neighbor
-similarity = 1 - (D[0][0] / 2)  # Convert L2 to cosine similarity
-```
-- Sub-100ms search across thousands of faces
-- Configurable similarity threshold (default: 70%)
-- Scalable to millions of embeddings
-
 ### 📈 **Continuous Learning Algorithm**
 ```python
 # Embedding averaging for improved accuracy
