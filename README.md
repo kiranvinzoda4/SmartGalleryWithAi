@@ -16,7 +16,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org/)
 [![MySQL](https://img.shields.io/badge/MySQL%208.0-00000F?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com/)
 
-[Features](#-key-features) • [Demo](#-demo) • [Tech Stack](#-technology-stack) • [Installation](#-installation) • [Architecture](#-system-architecture) • [API](#-api-documentation)
+[Features](#-key-features) • [Tech Stack](#-technology-stack) • [Installation](#-installation) • [Architecture](#-system-architecture)
 
 </div>
 
@@ -99,21 +99,6 @@ SmartGallery is a **production-ready, full-stack web application** that leverage
 | **TypeScript** | Type-safe JavaScript | Interface definitions, compile-time checks |
 | **Material-UI (MUI)** | Component library | Pre-built components, theming |
 | **Axios** | HTTP client | Interceptors, request/response handling |
-
----
-
-## 🎬 Demo
-
-### Workflow Overview
-```
-1. Upload Photo → 2. AI Detects Faces → 3. Name Unknown Faces → 4. Auto-Recognition in Future Uploads
-```
-
-**Example Use Case:**
-- Upload family photo with 4 people → Name them once
-- Upload vacation photo → System automatically recognizes and tags known faces
-- Click "Mom" → View all 50+ photos containing her across your entire gallery
-- Misidentification? Click to correct → AI learns and improves
 
 ---
 
@@ -220,31 +205,7 @@ npm run dev
 ### 🌐 **5. Access Application**
 - **Frontend:** http://localhost:3000
 - **Backend API:** http://localhost:8000
-- **API Docs (Swagger):** http://localhost:8000/docs
-- **API Docs (ReDoc):** http://localhost:8000/redoc
-
----
-
-## 📚 API Documentation
-
-### 🔐 **Authentication**
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/auth/register` | Register with email + OTP |
-| `POST` | `/auth/verify-otp` | Verify email OTP |
-| `POST` | `/auth/login` | Login with JWT token |
-| `GET` | `/user/profile` | Get user profile |
-
-### 📸 **Gallery Management**
-| Method | Endpoint | Description | Auth |
-|--------|----------|-------------|------|
-| `POST` | `/gallery/upload` | Upload photo & detect faces | ✅ |
-| `GET` | `/gallery/photos` | Get all photos (filter by person) | ✅ |
-| `POST` | `/gallery/faces/{id}/assign` | Assign name to face | ✅ |
-| `GET` | `/gallery/persons` | List all persons | ✅ |
-| `PUT` | `/gallery/persons/{id}` | Update person name | ✅ |
-| `DELETE` | `/gallery/persons/{id}` | Delete person | ✅ |
-| `DELETE` | `/gallery/photos/{id}` | Delete photo | ✅ |
+- **API Docs:** http://localhost:8000/docs
 
 ---
 
@@ -291,19 +252,6 @@ npm run dev
 ---
 
 ## 🎯 Technical Highlights
-
-### 🤖 **Deep Learning Face Detection**
-```python
-# InsightFace pipeline
-app = FaceAnalysis(name='buffalo_l')
-faces = app.get(image)  # Detects all faces
-for face in faces:
-    embedding = face.embedding  # 512-dimensional vector
-    bbox = face.bbox  # [x, y, width, height]
-```
-- Multi-face detection in group photos
-- Bounding box coordinates for UI overlay
-- Confidence scores for quality filtering
 
 ### 🧠 **Vector Similarity Search**
 ```python
@@ -407,19 +355,7 @@ LIMIT 50 OFFSET 0;
 
 ---
 
-## 🚀 Future Enhancements
 
-### Planned Features
-- [ ] **Bulk Upload** - Drag-and-drop multiple photos with progress tracking
-- [ ] **Face Clustering** - Unsupervised grouping of unknown faces using DBSCAN
-- [ ] **GPU Acceleration** - CUDA support for faster face detection
-- [ ] **Mobile App** - React Native with offline face detection
-- [ ] **Cloud Storage** - AWS S3/Azure Blob integration with CDN
-- [ ] **Advanced Search** - Filter by date, location (EXIF), custom tags
-- [ ] **Album Sharing** - Share galleries with other users (read-only/edit permissions)
-- [ ] **Export** - Download all photos of a person as ZIP
-- [ ] **Video Support** - Extract frames and detect faces in videos
-- [ ] **Docker Deployment** - Containerized deployment with docker-compose
 
 ---
 
@@ -459,15 +395,7 @@ LIMIT 50 OFFSET 0;
 **Vinzoda Kiran**  
 Full-Stack Developer | AI/ML Enthusiast
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vinzodakiran4@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vinzodakiran)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/vinzodakiran)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+📧 **Contact:** vinzodakiran4@gmail.com
 
 ---
 
@@ -481,38 +409,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 </div>
 
-## 🤝 Contributing
 
-Contributions welcome! Please:
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing`)
-3. Commit changes (`git commit -m 'Add feature'`)
-4. Push to branch (`git push origin feature/amazing`)
-5. Open Pull Request
-
----
-
-## 📞 Contact
-
-**Developer:** Vinzoda Kiran
-
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vinzodakiran4@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)
-
----
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
----
-
-<div align="center">
-
-**⭐ Star this repo if you find it helpful! ⭐**
-
-*Built with ❤️ using FastAPI, Next.js, InsightFace & FAISS*
-
-**Made in India 🇮🇳**
-
-</div>
