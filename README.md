@@ -253,17 +253,6 @@ npm run dev
 
 ## 🎯 Technical Highlights
 
-### 📈 **Continuous Learning Algorithm**
-```python
-# Embedding averaging for improved accuracy
-new_embedding = (current_embedding + correction_embedding) / 2
-index.reset()
-index.add(updated_embeddings)  # Rebuild index
-```
-- User corrections improve future predictions
-- Handles variations in lighting, angles, expressions
-- No model retraining required
-
 ### 🔍 **Optimized Database Queries**
 ```sql
 -- Indexed queries for fast filtering
